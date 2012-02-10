@@ -26,13 +26,17 @@
     function SeeMore(element) {
       var $element,
         _this = this;
+      this.id = element.id;
       $element = $(element);
       this.seeMoreSection = $element.attr("data-target");
-      console.log(this.seeMoreSection);
       $element.click(function(e) {
-        return $(_this.seeMoreSection).toggle();
+        return _this.show();
       });
     }
+
+    SeeMore.prototype.toggle = function() {
+      return $(this.seeMoreSection).toggle();
+    };
 
     return SeeMore;
 

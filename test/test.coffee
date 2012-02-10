@@ -18,10 +18,16 @@ Featurette.register("rainbowify", Rainbowify)
 
 class SeeMore
   constructor: (element) ->
+    @id = element.id
+
     $element = $(element)
     @seeMoreSection = $element.attr("data-target")
 
     $element.click (e) =>
-      $(@seeMoreSection).toggle()
+      @show()
+
+  toggle: ->
+    $(@seeMoreSection).toggle()
+
 
 Featurette.register("see-more", SeeMore)
