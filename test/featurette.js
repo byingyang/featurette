@@ -21,16 +21,13 @@
         var featurette, id, klass, obj;
         featurette = $(element).attr("data-featurette");
         klass = _this.registered_features[featurette];
-        if (klass) {
-          obj = new klass(element);
-        } else {
-          throw "Unknown featurette " + featurette;
-        }
+        if (!klass) throw "Unknown featurette " + featurette;
         id = element.id;
         if (id != null) {
           id = "featurette-" + _this.featurettes_counter;
           element.id = id;
         }
+        obj = new klass(element);
         _this.featurettes[id] = obj;
         return _this.featuretes_counter += 1;
       });
