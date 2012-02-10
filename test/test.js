@@ -30,7 +30,7 @@
       $element = $(element);
       this.seeMoreSection = $element.attr("data-target");
       $element.click(function(e) {
-        return _this.show();
+        return _this.toggle();
       });
     }
 

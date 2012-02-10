@@ -24,7 +24,7 @@ class SeeMore
     @seeMoreSection = $element.attr("data-target")
 
     $element.click (e) =>
-      @show()
+      @toggle()
 
   toggle: ->
     $(@seeMoreSection).toggle()
