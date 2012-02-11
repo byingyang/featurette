@@ -70,7 +70,17 @@ search for all elements with Featurette on them and instantiate the class
 that corresponds to the feature name given on that element with
 `data-featurette`.
 
-You can see a full example of using Featurette in the test/test.html
+Accessing Featurette Objects
+-----
+
+When you attach a feature to an element it's given an id if it doesn't
+already have one. You can use `Featurette.get("id")` to access the features attached to
+elements.
+
+Example Usage
+-----
+
+You can see a full example of using Featurette in the `test/test.html`
 sample page.
 
 License
