@@ -1,4 +1,6 @@
 class Featurette
+  @version = "1.0.0"
+
   @registered_features = {}
   @featurettes = {}
   @featurettes_counter = 0
