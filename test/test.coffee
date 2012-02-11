@@ -1,3 +1,12 @@
+# Adds cool exclamation marks to whatever element it's on.
+class Exclamation
+  constructor: (element) ->
+    $element = $(element)
+    newText = "&iexcl;#{$element.text()}!"
+    $element.html(newText)
+
+Featurette.register("exclamation", Exclamation)
+
 # This is kind of a dumb example that makes all the characters
 # in the given element show up as different colors
 class Rainbowify
@@ -29,5 +38,7 @@ class SeeMore
   toggle: ->
     $(@seeMoreSection).toggle()
 
-
 Featurette.register("see-more", SeeMore)
+
+$ ->
+  Featurette.load()

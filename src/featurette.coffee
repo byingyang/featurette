@@ -48,9 +48,6 @@ class Featurette
 
     classElements
 
-
-# Load featurette on load
-$ ->
-  Featurette.load()
-
 window.Featurette = Featurette
+
+

@@ -1,5 +1,20 @@
 (function() {
-  var Rainbowify, SeeMore;
+  var Exclamation, Rainbowify, SeeMore;
+
+  Exclamation = (function() {
+
+    function Exclamation(element) {
+      var $element, newText;
+      $element = $(element);
+      newText = "&iexcl;" + ($element.text()) + "!";
+      $element.html(newText);
+    }
+
+    return Exclamation;
+
+  })();
+
+  Featurette.register("exclamation", Exclamation);
 
   Rainbowify = (function() {
 
@@ -43,5 +58,9 @@
   })();
 
   Featurette.register("see-more", SeeMore);
+
+  $(function() {
+    return Featurette.load();
+  });
 
 }).call(this);
