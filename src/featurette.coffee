@@ -26,7 +26,7 @@ class Featurette
       obj = new klass(element)
 
       @featurettes[id] = obj
-      @featuretes_counter += 1
+      @featurettes_counter += 1
 
   # Returns the featurette object attached to this element
   @get: (id) ->
