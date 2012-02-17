@@ -52,6 +52,12 @@ Featurette with jQuery:
   $(function() { Featurette.load(); });
 ```
 
+You can also call `Featurette.load` with a parameter for a class name
+you'd like Featurette to match against instead of the `featurette`
+class. So, for example, `Featurette.load("so-rad")` would match all
+elements have the class `so-rad` on them and try to load features based
+on those elements `data-featurette` attribute.
+
 Now let's attach that `exclamation` feature to the `h1` tag:
 
 ```html
@@ -74,8 +80,8 @@ Accessing Featurette Objects
 -----
 
 When you attach a feature to an element it's given an id if it doesn't
-already have one. You can use `Featurette.get("id")` to access the features attached to
-elements.
+already have one. You can use `Featurette.get("id")` to access the feature attached to
+an element with the passed id.
 
 Example Usage
 -----
