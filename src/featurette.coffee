@@ -9,8 +9,8 @@ class Featurette
   @register: (name, klass) ->
     @registered_features[name] = klass
 
-  @load: ->
-    for element in @getElementsByClass("featurette")
+  @load(matchClass = "featurette") ->
+    for element in @getElementsByClass(matchClass)
       featurette = element.getAttribute("data-featurette")
 
       klass = @registered_features[featurette]
