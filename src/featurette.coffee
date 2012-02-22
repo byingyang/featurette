@@ -42,8 +42,8 @@ class Featurette
       classElements = document.getElementsByClassName(className)
     else
       classElements = new Array()
-      elements = node.getElementsByTagName("*")
-      pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)")
+      elements = document.getElementsByTagName("*")
+      pattern = new RegExp("(^|\\s)"+className+"(\\s|$)")
       for element in elements
         if pattern.test(element.className)
           classElements.push(element)
