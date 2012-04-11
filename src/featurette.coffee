@@ -19,7 +19,7 @@ class Featurette
 
       # Set up the automatic id for the element
       id = element.id
-      unless id?
+      if not id? or id is ""
         id = "featurette-#{@featurettes_counter}"
         element.id = id
 
